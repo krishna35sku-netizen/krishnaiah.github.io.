@@ -1,0 +1,1626 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dr.P.Krishnaiah | Assistant Professor(C) of Computer Science & Technology</title>
+
+    <meta name="description"
+          content="Academic portfolio of Dr.P.Krishnaiah, Assistant Professor(C) of Computer Science & Technology. Research interests include Cryptography, Network Security, Machine Learning, SVM, Data Analytics, Python and Java.">
+
+    <style>
+        /* ================================
+           GLOBAL STYLES
+        ================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #0b3d91;
+            --secondary: #1565c0;
+            --light-blue: #eaf3ff;
+            --dark: #172033;
+            --text: #4b5563;
+            --white: #ffffff;
+            --border: #dbe5f1;
+            --shadow: 0 10px 30px rgba(11, 61, 145, 0.10);
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        section {
+            padding: 80px 0;
+            scroll-margin-top: 70px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            color: var(--dark);
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--text);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .section-title .line {
+            width: 65px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+
+        /* ================================
+           NAVIGATION
+        ================================== */
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* ================================
+           HERO
+        ================================== */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 140px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(135deg, #f5f9ff 0%, #ffffff 55%, #eaf3ff 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content .small-title {
+            color: var(--secondary);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h1 {
+            color: var(--dark);
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary);
+        }
+
+        .hero-content h3 {
+            font-size: 23px;
+            color: #374151;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            max-width: 700px;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 21px;
+            border-radius: 7px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            border: 2px solid var(--primary);
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            color: var(--primary);
+            background: white;
+        }
+
+        .btn-outline:hover {
+            background: var(--light-blue);
+        }
+
+        .profile-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .profile-circle {
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            margin: auto;
+            background: linear-gradient(135deg, #dbeafe, #eff6ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 75px;
+            font-weight: bold;
+            border: 7px solid white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+        }
+
+        .profile-card h3 {
+            margin-top: 20px;
+            color: var(--dark);
+        }
+
+        .profile-card p {
+            font-size: 14px;
+        }
+
+        /* ================================
+           ABOUT
+        ================================== */
+
+        .about {
+            background: #f8fbff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        .about-box {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .about-box h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .info-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #edf1f7;
+        }
+
+        .info-list strong {
+            color: var(--dark);
+        }
+
+        /* ================================
+           EDUCATION / EXPERIENCE
+        ================================== */
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+            border-left: 3px solid #c9dcf7;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: var(--secondary);
+            border-radius: 50%;
+            left: -39px;
+            top: 30px;
+            border: 3px solid white;
+        }
+
+        .timeline-item h3 {
+            color: var(--primary);
+        }
+
+        .timeline-item .date {
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* ================================
+           RESEARCH
+        ================================== */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .research-card {
+            padding: 25px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .research-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .research-card h3 {
+            color: var(--dark);
+            font-size: 18px;
+        }
+
+        /* ================================
+           CARDS
+        ================================== */
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--light-blue);
+            color: var(--primary);
+            padding: 4px 9px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .card-link {
+            display: inline-block;
+            margin-top: 18px;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        /* ================================
+           COURSES
+        ================================== */
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .course {
+            padding: 25px;
+            background: #f8fbff;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .course h3 {
+            color: var(--primary);
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        /* ================================
+           PROJECTS
+        ================================== */
+
+        .projects {
+            background: #f8fbff;
+        }
+
+        /* ================================
+           CONTACT
+        ================================== */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 35px;
+        }
+
+        .contact-info,
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info h3,
+        .contact-form h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 18px;
+        }
+
+        .contact-item strong {
+            color: var(--dark);
+            display: block;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 15px;
+            border: 1px solid #ccd7e5;
+            border-radius: 6px;
+            font-family: inherit;
+        }
+
+        .contact-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        /* ================================
+           FOOTER
+        ================================== */
+
+        footer {
+            background: #0d1b34;
+            color: #d9e4f5;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .back-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .back-top.show {
+            display: flex;
+        }
+
+        /* ================================
+           RESPONSIVE DESIGN
+        ================================== */
+
+        @media (max-width: 900px) {
+
+            .hero-grid,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .research-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                display: none;
+                box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 8px;
+            }
+
+            .hero-content h1 {
+                font-size: 43px;
+            }
+
+            .research-grid,
+            .cards-grid,
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .section-title h2 {
+                font-size: 29px;
+            }
+
+            .profile-circle {
+                width: 170px;
+                height: 170px;
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================================
+     NAVIGATION
+================================= -->
+
+<header>
+    <div class="container">
+        <nav>
+
+            <a href="#home" class="logo">
+                Dr. <span>P.Krishnaiah</span>
+            </a>
+
+            <div class="menu-btn" id="menuBtn">☰</div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#materials">Materials</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </div>
+</header>
+
+
+<!-- ================================
+     HOME
+================================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+            <div class="hero-content">
+
+                <div class="small-title">
+                    Professor • Researcher • Educator
+                </div>
+
+                <h1>
+                    Dr. <span>P.Krishnaiah</span>
+                </h1>
+
+                <h3>
+                   Assistant Professor(C) of Computer Science & Technology
+                </h3>
+
+                <p>
+                    MCA, PhD in Computer Science. Dedicated to teaching,
+                    research and innovation in Computer Science with a
+                    focus on secure computing, machine learning,
+                    data analytics and emerging technologies.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="cv.pdf"
+                       class="btn btn-primary"
+                       download>
+                        Download CV
+                    </a>
+
+                    <!-- Replace # with your actual profile URL -->
+                    <a href="#"
+                       class="btn btn-outline"
+                       target="_blank">
+                        Google Scholar
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-outline"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-outline"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-card">
+
+                <div class="profile-circle">
+                    DR
+                </div>
+
+                <h3>Dr.P.Krishnaiah</h3>
+
+                <p>
+                    Assistant Professor(C) of Computer Science & Technology
+                </p>
+
+                <p>
+                    Yogi Vemana University,Kadapa,A.P India
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     ABOUT
+================================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About Me</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Academic profile, teaching philosophy and professional interests.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-box">
+
+                <h3>Academic Profile</h3>
+
+                <p>
+                    I am a Computer Science academician and researcher
+                    with an MCA and PhD in Computer Science. My academic
+                    interests span computer networks, cybersecurity,
+                    machine learning, data analytics and programming.
+                </p>
+
+                <br>
+
+                <p>
+                    My teaching approach emphasizes conceptual clarity,
+                    practical laboratory experience, problem solving and
+                    industry-oriented skills.
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h3>Professional Information</h3>
+
+                <ul class="info-list">
+
+                    <li>
+                        <strong>Qualification:</strong>
+                        MCA, PhD in Computer Science
+                    </li>
+
+                    <li>
+                        <strong>Field:</strong>
+                        Computer Science & Technology
+                    </li>
+
+                    <li>
+                        <strong>Location:</strong>
+                        Yogi Vemana University,Kadapa,A.P India
+                    </li>
+
+                    <li>
+                        <strong>Research:</strong>
+                        AI, Security, Data Analytics
+                    </li>
+
+                    <li>
+                        <strong>Programming:</strong>
+                        Python, Java
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     EDUCATION & EXPERIENCE
+================================= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Education & Experience</h2>
+
+            <div class="line"></div>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="date">Academic Qualification</div>
+
+                <h3>PhD in Computer Science</h3>
+
+                <p>
+                    Doctoral research in Computer Science 
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="date">Postgraduate</div>
+
+                <h3>Master of Computer Applications (MCA)</h3>
+
+                <p>
+                    Advanced study in computer applications,
+                    programming, databases, networking and software
+                    engineering.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="date">Academic Experience</div>
+
+                <h3>Teaching & Research</h3>
+
+                <p>
+                    Teaching undergraduate and postgraduate Computer
+                    Science courses, guiding student projects and
+                    conducting research.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="date">Professional Development</div>
+
+                <h3>Research & Technical Activities</h3>
+
+                <p>
+                    Continuous engagement with emerging technologies,
+                    research publications, technical workshops and
+                    student mentoring.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     RESEARCH INTERESTS
+================================= -->
+
+<section class="about" id="research">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Research Interests</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Areas of current academic and research interest.
+            </p>
+
+        </div>
+
+
+        <div class="research-grid">
+
+            <div class="research-card">
+                <div class="research-icon">🔐</div>
+                <h3>Cryptography</h3>
+                <p>Secure algorithms and information protection.</p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">🌐</div>
+                <h3>Network Security</h3>
+                <p>Secure networks, attacks and defense mechanisms.</p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">🤖</div>
+                <h3>Machine Learning</h3>
+                <p>Intelligent systems and predictive models.</p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">📊</div>
+                <h3>Data Analytics</h3>
+                <p>Data-driven decision making and analytics.</p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">🧠</div>
+                <h3>SVM</h3>
+                <p>Classification and machine learning applications.</p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">🐍</div>
+                <h3>Python</h3>
+                <p>Programming, AI, analytics and automation.</p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">☕</div>
+                <h3>Java</h3>
+                <p>Enterprise applications and software development.</p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon">🎓</div>
+                <h3>CS Education</h3>
+                <p>Technology-enhanced teaching and learning.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     PUBLICATIONS
+================================= -->
+
+<section id="publications">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Publications</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Selected research publications and academic contributions.
+            </p>
+
+        </div>
+
+
+        <div class="cards-grid">
+
+            <div class="card">
+
+                <h3>Research Paper Title 01</h3>
+
+                <p>
+                    Placeholder for a research paper related to
+                    Network Security / Cryptography.
+                </p>
+
+                <span class="tag">Research Paper</span>
+
+                <br>
+
+                <a href="#" class="card-link">
+                    View Paper →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Research Paper Title 02</h3>
+
+                <p>
+                    Placeholder for a Machine Learning or SVM
+                    research publication.
+                </p>
+
+                <span class="tag">Machine Learning</span>
+
+                <br>
+
+                <a href="#" class="card-link">
+                    View Paper →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Research Paper Title 03</h3>
+
+                <p>
+                    Placeholder for Data Analytics or Computer
+                    Science Education research.
+                </p>
+
+                <span class="tag">Data Analytics</span>
+
+                <br>
+
+                <a href="#" class="card-link">
+                    View Paper →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     COURSES
+================================= -->
+
+<section class="about" id="courses">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Courses Taught</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Undergraduate and postgraduate Computer Science courses.
+            </p>
+
+        </div>
+
+
+        <div class="course-grid">
+
+            <div class="course">
+                <h3>Data Structures</h3>
+                <p>Arrays, stacks, queues, trees, graphs and algorithms.</p>
+            </div>
+
+            <div class="course">
+                <h3>Database Management Systems</h3>
+                <p>SQL, relational databases, normalization and transactions.</p>
+            </div>
+
+            <div class="course">
+                <h3>Computer Networks</h3>
+                <p>Networking models, protocols, routing and security.</p>
+            </div>
+
+            <div class="course">
+                <h3>Operating Systems</h3>
+                <p>Processes, memory management, file systems and Unix.</p>
+            </div>
+
+            <div class="course">
+                <h3>Artificial Intelligence</h3>
+                <p>Search, knowledge representation and intelligent systems.</p>
+            </div>
+
+            <div class="course">
+                <h3>Machine Learning</h3>
+                <p>Supervised learning, SVM, classification and evaluation.</p>
+            </div>
+
+            <div class="course">
+                <h3>Web Technologies</h3>
+                <p>HTML, CSS, JavaScript and web application development.</p>
+            </div>
+
+            <div class="course">
+                <h3>Python Programming</h3>
+                <p>Python programming, data analytics and automation.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     STUDY MATERIALS
+================================= -->
+
+<section id="materials">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Student Study Materials</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Notes, laboratory programs, presentations and examination resources.
+            </p>
+
+        </div>
+
+
+        <div class="cards-grid">
+
+            <div class="card">
+
+                <h3>Data Structures Notes</h3>
+
+                <p>
+                    Unit-wise notes, algorithms, diagrams and
+                    examination-oriented questions.
+                </p>
+
+                <span class="tag">PDF / Notes</span>
+
+                <br>
+
+                <a href="#" class="card-link">
+                    Download →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Computer Networks</h3>
+
+                <p>
+                    TCP/IP, OSI model, routing, protocols and
+                    network security study material.
+                </p>
+
+                <span class="tag">Study Material</span>
+
+                <br>
+
+                <a href="#" class="card-link">
+                    View →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Python Programming Lab</h3>
+
+                <p>
+                    Laboratory programs, exercises and mini-project
+                    practice material.
+                </p>
+
+                <span class="tag">Lab Material</span>
+
+                <br>
+
+                <a href="#" class="card-link">
+                    View →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>UGC NET / APPSC Preparation</h3>
+
+                <p>
+                    Technical notes, MCQs, previous questions and
+                    examination preparation resources.
+                </p>
+
+                <span class="tag">Exam Preparation</span>
+
+                <br>
+
+                <a href="#" class="card-link">
+                    View →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Machine Learning Notes</h3>
+
+                <p>
+                    ML concepts, classification, SVM and practical
+                    examples.
+                </p>
+
+                <span class="tag">Machine Learning</span>
+
+                <br>
+
+                <a href="#" class="card-link">
+                    View →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Web Technologies</h3>
+
+                <p>
+                    HTML, XHTML, CSS, JavaScript and web programming
+                    laboratory resources.
+                </p>
+
+                <span class="tag">Web Technology</span>
+
+                <br>
+
+                <a href="#" class="card-link">
+                    View →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     PROJECTS
+================================= -->
+
+<section class="projects" id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Projects</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Selected academic, research and student project areas.
+            </p>
+
+        </div>
+
+
+        <div class="cards-grid">
+
+            <div class="card">
+
+                <h3>Network Security System</h3>
+
+                <p>
+                    Academic/research project for analyzing network
+                    threats and implementing security mechanisms.
+                </p>
+
+                <span class="tag">Cyber Security</span>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Machine Learning Prediction</h3>
+
+                <p>
+                    Machine learning model for classification and
+                    prediction using Python.
+                </p>
+
+                <span class="tag">Python + ML</span>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Data Analytics Platform</h3>
+
+                <p>
+                    Data processing and visualization project for
+                    extracting useful information from datasets.
+                </p>
+
+                <span class="tag">Data Analytics</span>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Secure IoT Research</h3>
+
+                <p>
+                    Research-oriented project focusing on security
+                    challenges in IoT and connected networks.
+                </p>
+
+                <span class="tag">IoT Security</span>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Student Learning Portal</h3>
+
+                <p>
+                    Web-based platform for sharing notes,
+                    presentations, laboratory resources and MCQs.
+                </p>
+
+                <span class="tag">Web Application</span>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Academic Data Analytics</h3>
+
+                <p>
+                    Analytics system for understanding student
+                    performance and academic trends.
+                </p>
+
+                <span class="tag">Education + AI</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     CONTACT
+================================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact</h2>
+
+            <div class="line"></div>
+
+            <p>
+                For academic collaboration, research discussion and student queries.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <h3>Get In Touch</h3>
+
+                <div class="contact-item">
+
+                    <strong>Assistant Professor(C)</strong>
+
+                    Dr.P.Krishnaiah
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Location</strong>
+              Yogi Vemana University,Kadapa,A.P India
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Email</strong>
+
+                    your.email@example.com
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Research Areas</strong>
+
+                    Cryptography, Network Security,
+                    Machine Learning, SVM and Data Analytics
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-form">
+
+                <h3>Send a Message</h3>
+
+                <form id="contactForm">
+
+                    <input type="text"
+                           id="name"
+                           placeholder="Your Name"
+                           required>
+
+                    <input type="email"
+                           id="email"
+                           placeholder="Your Email"
+                           required>
+
+                    <input type="text"
+                           id="subject"
+                           placeholder="Subject"
+                           required>
+
+                    <textarea id="message"
+                              placeholder="Your Message"
+                              required></textarea>
+
+                    <button type="submit"
+                            class="btn btn-primary">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     FOOTER
+================================= -->
+
+<footer>
+
+    <p>
+        © <span id="year"></span>
+        Dr.P.Krishnaiah. All Rights Reserved.
+    </p>
+
+    <p>
+        Assistant Professor(C) of Computer Science & Technology• Yogi Vemana University,Kadapa,A.P India 
+    </p>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<div class="back-top" id="backTop">
+    ↑
+</div>
+
+
+<!-- ================================
+     JAVASCRIPT
+================================= -->
+
+<script>
+
+    /* Mobile Navigation */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+
+
+    /* Close mobile menu after clicking */
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+            navLinks.classList.remove("active");
+        });
+
+    });
+
+
+    /* Current Year */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /* Back to Top */
+
+    const backTop = document.getElementById("backTop");
+
+    window.addEventListener("scroll", function() {
+
+        if (window.scrollY > 400) {
+            backTop.classList.add("show");
+        } else {
+            backTop.classList.remove("show");
+        }
+
+    });
+
+
+    backTop.addEventListener("click", function() {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    /* Contact Form */
+
+    document.getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value;
+
+            alert(
+                "Thank you, " + name +
+                "! Your message has been prepared.\n\n" +
+                "For a real contact form, connect this page " +
+                "to your own backend or email service."
+            );
+
+            this.reset();
+
+        });
+
+</script>
+
+</body>
+</html>
+```
